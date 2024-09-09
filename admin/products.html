@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Party Wizard - Login</title>
+
+    <!-- === Favicon === -->
+    <link rel="shortcut icon" type="image/png" href="assets/images/logo_out_text.svg">
+    <!-- === End Favicon === -->
+
+    <!-- === Css === -->
+    <link rel="stylesheet" href="../assets/css/custoum.css">
+    <!-- === End css === -->
+
+    <!-- === Tailwind CSS === -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- === End Tailwind CSS === -->
+
+    <!-- === Flowbite === -->
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet" />
+    <!-- === End Flowbite === -->
+
+    <!-- === Fontawesome === -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- === End Fontawesome === -->
+
+    <!-- === Google Fonts Inter === -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- === End Google Fonts Inter === -->
+
+</head>
+
+<body style="background-color: rgb(237, 237, 237) !important;">
+
+    <!-- main content -->
+    <div class="container">
+
+        <aside id="logo-sidebar"
+            class="fixed top-0 left-0 z-40 w-44 h-screen transition-transform -translate-x-full sm:translate-x-0"
+            aria-label="Sidebar">
+            <div class="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
+                <a href="https://flowbite.com/" class="flex items-center ps-2.5 mb-5">
+                    <img src="../assets/images/logo_out_text.svg" class="me-3 h-12" alt="Logo" />
+                </a>
+                <ul class="space-y-7 font-medium mt-10">
+                    <li>
+                        <a href="#"
+                            class="flex items-center p-2 text-custom-orange rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                            <svg class="flex-shrink-0 w-4 h-4 text-custom-orange transition duration-75 "
+                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                viewBox="0 0 18 18">
+                                <path
+                                    d="M6.143 0H1.857A1.857 1.857 0 0 0 0 1.857v4.286C0 7.169.831 8 1.857 8h4.286A1.857 1.857 0 0 0 8 6.143V1.857A1.857 1.857 0 0 0 6.143 0Zm10 0h-4.286A1.857 1.857 0 0 0 10 1.857v4.286C10 7.169 10.831 8 11.857 8h4.286A1.857 1.857 0 0 0 18 6.143V1.857A1.857 1.857 0 0 0 16.143 0Zm-10 10H1.857A1.857 1.857 0 0 0 0 11.857v4.286C0 17.169.831 18 1.857 18h4.286A1.857 1.857 0 0 0 8 16.143v-4.286A1.857 1.857 0 0 0 6.143 10Zm10 0h-4.286A1.857 1.857 0 0 0 10 11.857v4.286c0 1.026.831 1.857 1.857 1.857h4.286A1.857 1.857 0 0 0 18 16.143v-4.286A1.857 1.857 0 0 0 16.143 10Z" />
+                            </svg>
+                            <span class="ms-3">Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                            <i class="fas fa-chart-pie w-5 h-5  text-gray-400"></i>
+                            <span class="flex-1 ms-3 whitespace-nowrap text-gray-400">Analytics</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#"
+                            class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                            <i class="fas fa-cube w-5 h-5  text-gray-400"></i>
+                            <span class="flex-1 ms-3 whitespace-nowrap text-gray-400">Products</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#"
+                            class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                            <i class="fas fa-cog w-5 h-5  text-gray-400"></i>
+                            <span class="flex-1 ms-3 whitespace-nowrap text-gray-400">Settings</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </aside>
+
+        <div class="flex flex-col sm:flex-row sm:ml-48">
+
+            <!-- main sec -->
+            <div class="pt-4 w-full">
+                <!-- Search and Icons -->
+                <div class="flex w-full items-center gap-4 bg-white p-4 rounded-lg">
+                    <!-- Search Bar -->
+                    <div class="relative flex items-center gap-3 w-full">
+                        <input type="text"
+                            class="pl-10 border border-gray-300  rounded-lg  py-2  w-full focus:outline-none focus:border-gray-200 transition-all duration-300"
+                            placeholder="Product Name" />
+                        <button class="absolute left-3 text-gray-500 hover:text-gray-700 transition-all duration-300">
+                            <i class="fas fa-search text-gray-400 text-sm"></i>
+                        </button>
+                    </div>
+
+                    <!-- Icons -->
+                    <div class="flex items-center space-x-4">
+                        <!-- Notification Icon -->
+                        <a
+                            class="rounded-lg hover:bg-gray-100 w-10 h-10 border-2 border-gray-300 flex items-center justify-center transition-all duration-300">
+                            <i class="far fa-bell text-gray-600 text-md"></i>
+                        </a>
+
+                        <!-- User Icon -->
+                        <a
+                            class="rounded-lg hover:bg-gray-100 w-10 h-10 border-2 border-gray-300 flex items-center justify-center transition-all duration-300">
+                            <i class="far fa-user text-gray-600 text-md"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Table -->
+                <div class="bg-white rounded-lg p-6 mt-5">
+                    <!-- Header with buttons -->
+                    <div class="flex justify-between mb-3 items-center">
+                        <span class="text-lg font-semibold">Manage Products</span>
+                        <!-- New Product button with icon -->
+                        <div class="relative">
+                            <button
+                                class="bg-custom-orange text-white text-sm rounded-lg px-4 py-2 flex items-center gap-2 hover:bg-blue-600 transition-all duration-300">
+                                <i class="fas fa-plus"></i>
+                                <span>New Product</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                            <thead class="text-xs text-gray-700 uppercase border-b dark:border-gray-700">
+                                <tr>
+                                    <th scope="col" class="py-6 px-4 font-bold">#</th>
+                                    <th scope="col" class="py-6 px-4 font-bold">Product</th>
+                                    <th scope="col" class="py-6 px-4 font-bold">Image</th>
+                                    <th scope="col" class="py-6 px-4 font-bold">Revenues</th>
+                                    <th scope="col" class="py-6 px-4 font-bold">Sales</th>
+                                    <th scope="col" class="py-6 px-4 font-bold">Offer</th>
+                                    <th scope="col" class="py-6 px-4 font-bold">Price</th>
+                                    <th scope="col" class="py-6 px-4 font-bold">Rating</th>
+                                    <th scope="col" class="py-6 px-4 font-bold">Stock</th>
+                                    <th scope="col" class="py-6 px-4 font-bold">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr
+                                    class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                    <td class="py-4 px-4 font-semibold ">#1024</td>
+                                    <td class="py-4 px-4 font-medium text-gray-900 whitespace-nowrap">
+                                        <p class="text-md text-gray-600 font-semibold">Lorem Ipsum Dolor</p>
+                                    </td>
+                                    <td class="py-4 px-4">
+                                        <img class="w-9 h-9 rounded-lg" src="../assets/images/pro.svg"
+                                            alt="Product Image">
+                                    </td>
+                                    <td class="py-4 px-4">
+                                        <span class="font-semibold text-gray-600 text-md">$1,250</span>
+                                    </td>
+                                    <td class="py-4 px-4">
+                                        <span class="font-semibold text-gray-600 text-md">150</span>
+                                    </td>
+                                    <td class="py-4 px-4">
+                                        <span
+                                            class="bg-green-50 text-green-600 text-md font-semibold px-2.5 py-0.5 rounded dark:bg-green-900 dark:text-green-300">
+                                            10% Off
+                                        </span>
+                                    </td>
+                                    <td class="py-4 px-4">
+                                        <span class="font-semibold text-gray-600 text-md">$1,250</span>
+                                    </td>
+                                    <td class="py-4 px-4">
+                                        <span class="font-semibold text-gray-600 text-md">4</span>
+                                    </td>
+                                    <td class="py-4 px-4">
+                                        <span class="font-semibold text-gray-600 text-md">20</span>
+                                    </td>
+                                    <td class="py-4 px-4 flex gap-2">
+                                        <button
+                                            class="text-white bg-yellow-300 rounded-md p-2 px-3 hover:bg-yellow-700 flex items-center">
+                                            <i class="fas fa-edit"></i>
+                                        </button>
+                                        <button
+                                            class="text-white bg-red-500 rounded-md p-2 px-3 hover:bg-red-700 flex items-center">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr
+                                    class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                    <td class="py-4 px-4 font-semibold ">#1024</td>
+                                    <td class="py-4 px-4 font-medium text-gray-900 whitespace-nowrap">
+                                        <p class="text-md text-gray-600 font-semibold">Lorem Ipsum Dolor</p>
+                                    </td>
+                                    <td class="py-4 px-4">
+                                        <img class="w-9 h-9 rounded-lg" src="../assets/images/pro.svg"
+                                            alt="Product Image">
+                                    </td>
+                                    <td class="py-4 px-4">
+                                        <span class="font-semibold text-gray-600 text-md">$1,250</span>
+                                    </td>
+                                    <td class="py-4 px-4">
+                                        <span class="font-semibold text-gray-600 text-md">150</span>
+                                    </td>
+                                    <td class="py-4 px-4">
+                                        <span
+                                            class="bg-green-50 text-green-600 text-md font-semibold px-2.5 py-0.5 rounded dark:bg-green-900 dark:text-green-300">
+                                            10% Off
+                                        </span>
+                                    </td>
+                                    <td class="py-4 px-4">
+                                        <span class="font-semibold text-gray-600 text-md">$1,250</span>
+                                    </td>
+                                    <td class="py-4 px-4">
+                                        <span class="font-semibold text-gray-600 text-md">4</span>
+                                    </td>
+                                    <td class="py-4 px-4">
+                                        <span class="font-semibold text-gray-600 text-md">20</span>
+                                    </td>
+                                    <td class="py-4 px-4 flex gap-2">
+                                        <button
+                                            class="text-white bg-yellow-300 rounded-md p-2 px-3 hover:bg-yellow-700 flex items-center">
+                                            <i class="fas fa-edit"></i>
+                                        </button>
+                                        <button
+                                            class="text-white bg-red-500 rounded-md p-2 px-3 hover:bg-red-700 flex items-center">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr
+                                    class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                    <td class="py-4 px-4 font-semibold ">#1024</td>
+                                    <td class="py-4 px-4 font-medium text-gray-900 whitespace-nowrap">
+                                        <p class="text-md text-gray-600 font-semibold">Lorem Ipsum Dolor</p>
+                                    </td>
+                                    <td class="py-4 px-4">
+                                        <img class="w-9 h-9 rounded-lg" src="../assets/images/pro.svg"
+                                            alt="Product Image">
+                                    </td>
+                                    <td class="py-4 px-4">
+                                        <span class="font-semibold text-gray-600 text-md">$1,250</span>
+                                    </td>
+                                    <td class="py-4 px-4">
+                                        <span class="font-semibold text-gray-600 text-md">150</span>
+                                    </td>
+                                    <td class="py-4 px-4">
+                                        <span
+                                            class="bg-green-50 text-green-600 text-md font-semibold px-2.5 py-0.5 rounded dark:bg-green-900 dark:text-green-300">
+                                            10% Off
+                                        </span>
+                                    </td>
+                                    <td class="py-4 px-4">
+                                        <span class="font-semibold text-gray-600 text-md">$1,250</span>
+                                    </td>
+                                    <td class="py-4 px-4">
+                                        <span class="font-semibold text-gray-600 text-md">4</span>
+                                    </td>
+                                    <td class="py-4 px-4">
+                                        <span class="font-semibold text-gray-600 text-md">20</span>
+                                    </td>
+                                    <td class="py-4 px-4 flex gap-2">
+                                        <button
+                                            class="text-white bg-yellow-300 rounded-md p-2 px-3 hover:bg-yellow-700 flex items-center">
+                                            <i class="fas fa-edit"></i>
+                                        </button>
+                                        <button
+                                            class="text-white bg-red-500 rounded-md p-2 px-3 hover:bg-red-700 flex items-center">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr
+                                    class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                    <td class="py-4 px-4 font-semibold ">#1024</td>
+                                    <td class="py-4 px-4 font-medium text-gray-900 whitespace-nowrap">
+                                        <p class="text-md text-gray-600 font-semibold">Lorem Ipsum Dolor</p>
+                                    </td>
+                                    <td class="py-4 px-4">
+                                        <img class="w-9 h-9 rounded-lg" src="../assets/images/pro.svg"
+                                            alt="Product Image">
+                                    </td>
+                                    <td class="py-4 px-4">
+                                        <span class="font-semibold text-gray-600 text-md">$1,250</span>
+                                    </td>
+                                    <td class="py-4 px-4">
+                                        <span class="font-semibold text-gray-600 text-md">150</span>
+                                    </td>
+                                    <td class="py-4 px-4">
+                                        <span
+                                            class="bg-green-50 text-green-600 text-md font-semibold px-2.5 py-0.5 rounded dark:bg-green-900 dark:text-green-300">
+                                            10% Off
+                                        </span>
+                                    </td>
+                                    <td class="py-4 px-4">
+                                        <span class="font-semibold text-gray-600 text-md">$1,250</span>
+                                    </td>
+                                    <td class="py-4 px-4">
+                                        <span class="font-semibold text-gray-600 text-md">4</span>
+                                    </td>
+                                    <td class="py-4 px-4">
+                                        <span class="font-semibold text-gray-600 text-md">20</span>
+                                    </td>
+                                    <td class="py-4 px-4 flex gap-2">
+                                        <button
+                                            class="text-white bg-yellow-300 rounded-md p-2 px-3 hover:bg-yellow-700 flex items-center">
+                                            <i class="fas fa-edit"></i>
+                                        </button>
+                                        <button
+                                            class="text-white bg-red-500 rounded-md p-2 px-3 hover:bg-red-700 flex items-center">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr
+                                    class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                    <td class="py-4 px-4 font-semibold ">#1024</td>
+                                    <td class="py-4 px-4 font-medium text-gray-900 whitespace-nowrap">
+                                        <p class="text-md text-gray-600 font-semibold">Lorem Ipsum Dolor</p>
+                                    </td>
+                                    <td class="py-4 px-4">
+                                        <img class="w-9 h-9 rounded-lg" src="../assets/images/pro.svg"
+                                            alt="Product Image">
+                                    </td>
+                                    <td class="py-4 px-4">
+                                        <span class="font-semibold text-gray-600 text-md">$1,250</span>
+                                    </td>
+                                    <td class="py-4 px-4">
+                                        <span class="font-semibold text-gray-600 text-md">150</span>
+                                    </td>
+                                    <td class="py-4 px-4">
+                                        <span
+                                            class="bg-green-50 text-green-600 text-md font-semibold px-2.5 py-0.5 rounded dark:bg-green-900 dark:text-green-300">
+                                            10% Off
+                                        </span>
+                                    </td>
+                                    <td class="py-4 px-4">
+                                        <span class="font-semibold text-gray-600 text-md">$1,250</span>
+                                    </td>
+                                    <td class="py-4 px-4">
+                                        <span class="font-semibold text-gray-600 text-md">4</span>
+                                    </td>
+                                    <td class="py-4 px-4">
+                                        <span class="font-semibold text-gray-600 text-md">20</span>
+                                    </td>
+                                    <td class="py-4 px-4 flex gap-2">
+                                        <button
+                                            class="text-white bg-yellow-300 rounded-md p-2 px-3 hover:bg-yellow-700 flex items-center">
+                                            <i class="fas fa-edit"></i>
+                                        </button>
+                                        <button
+                                            class="text-white bg-red-500 rounded-md p-2 px-3 hover:bg-red-700 flex items-center">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <!-- end main content -->
+
+    <!-- scripts assets -->
+
+    <!-- Include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- === End jQuery === -->
+
+    <!-- === Flowbite JS === -->
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+    <!-- === End Flowbite JS === -->
+
+    <!-- === Custom JS === -->
+    <script src="assets/js/showpass.js"></script>
+    <script src="assets/js/showcolumn.js"></script>
+    <!-- === End Custom JS === -->
+
+</body>
+
+</html>
